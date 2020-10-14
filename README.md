@@ -3,4 +3,4 @@
 [easyfx](https://github.com/xizi110/easyfx)
 
 
-<video src="demo.mp4"/>
+![demo](./demo.gif)
