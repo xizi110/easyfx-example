@@ -4,27 +4,27 @@
 <?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import xyz.yuelai.control.*?>
+<?import xyz.yuelai.domain.*?>
 
-<?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import java.util.Date?>
-<?import xyz.yuelai.domain.User?>
 <StackPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" vvalue="1.0">
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
             <content>
                 <VBox prefWidth="985.0" spacing="10.0">
                     <children>
                         <Label text="按钮" />
                         <HBox spacing="10">
                             <children>
-                                <Button layoutX="59.0" layoutY="14.0" mnemonicParsing="false" styleClass="button-default" text="默认按钮" onAction="#showNotification" />
-                                <Button layoutX="177.0" layoutY="14.0" mnemonicParsing="false" styleClass="button-primary" text="主要按钮" onAction="#showNotification"/>
-                                <Button layoutX="296.0" layoutY="14.0" mnemonicParsing="false" styleClass="button-success" text="成功按钮" onAction="#showMessage"/>
-                                <Button layoutX="59.0" layoutY="83.0" mnemonicParsing="false" styleClass="button-info" text="信息按钮" onAction="#showMessage"/>
-                                <Button layoutX="177.0" layoutY="83.0" mnemonicParsing="false" styleClass="button-warning" text="警告按钮" onAction="#showMessage"/>
-                                <Button layoutX="296.0" layoutY="83.0" mnemonicParsing="false" styleClass="button-danger" text="危险按钮" onAction="#showMessage"/>
+                                <Button layoutX="59.0" layoutY="14.0" mnemonicParsing="false" onAction="#showNotification" styleClass="button-default" text="默认按钮" />
+                                <Button layoutX="177.0" layoutY="14.0" mnemonicParsing="false" onAction="#showNotification" styleClass="button-primary" text="主要按钮" />
+                                <Button layoutX="296.0" layoutY="14.0" mnemonicParsing="false" onAction="#showMessage" styleClass="button-success" text="成功按钮" />
+                                <Button layoutX="59.0" layoutY="83.0" mnemonicParsing="false" onAction="#showMessage" styleClass="button-info" text="信息按钮" />
+                                <Button layoutX="177.0" layoutY="83.0" mnemonicParsing="false" onAction="#showMessage" styleClass="button-warning" text="警告按钮" />
+                                <Button layoutX="296.0" layoutY="83.0" mnemonicParsing="false" onAction="#showMessage" styleClass="button-danger" text="危险按钮" />
                             </children>
                         </HBox>
                         <Label text="单选多选" />
@@ -34,6 +34,16 @@
                                 <RadioButton layoutX="158.0" layoutY="65.0" mnemonicParsing="false" prefWidth="127.0" text="RadioButton" />
                                 <CheckBox layoutX="73.0" layoutY="119.0" mnemonicParsing="false" text="备选" />
                                 <CheckBox layoutX="207.0" layoutY="119.0" mnemonicParsing="false" text="CheckBox" />
+                            </children>
+                        </HBox>
+                        <Label text="Switch开关" />
+                        <HBox spacing="10.0">
+                            <children>
+                                <EleSwitch active="true" fx:id="eleSwitch"/>
+                                <EleSwitch active="false"/>
+                                <EleSwitch activeColor="blue" inActiveColor="slategray"/>
+                                <EleSwitch activeColor="#000" inActiveColor="#aaa"/>
+                                <EleSwitch disable="true"/>
                             </children>
                         </HBox>
                         <Label text="输入框" />
@@ -87,7 +97,7 @@
                         <Label text="表格" />
                         <HBox spacing="10.0">
                             <children>
-                                <TableView layoutX="51.0" layoutY="99.0" prefHeight="400.0" HBox.hgrow="ALWAYS" fx:id="table" >
+                                <TableView fx:id="table" layoutX="51.0" layoutY="99.0" prefHeight="400.0" HBox.hgrow="ALWAYS">
                                     <columns>
                                         <TableColumn prefWidth="75.0" text="日期">
                                             <cellValueFactory>
@@ -107,13 +117,13 @@
                                             </Date>
                                         </fx:define>
                                         <FXCollections fx:factory="observableArrayList">
-                                            <User name="name1" date="$date"/>
-                                            <User name="name2"  date="$date"/>
-                                            <User name="name4"  date="$date"/>
-                                            <User name="name5"  date="$date"/>
-                                            <User name="name6"  date="$date"/>
-                                            <User name="name7"  date="$date"/>
-                                            <User name="name8"  date="$date"/>
+                                            <User name="name1" />
+                                            <User name="name2" />
+                                            <User name="name4" />
+                                            <User name="name5" />
+                                            <User name="name6" />
+                                            <User name="name7" />
+                                            <User name="name8" />
                                         </FXCollections>
                                     </items>
                                     <columnResizePolicy>

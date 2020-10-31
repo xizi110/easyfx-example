@@ -4,17 +4,31 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import xyz.yuelai.View;
+import xyz.yuelai.control.EleSwitch;
 import xyz.yuelai.control.Message;
 import xyz.yuelai.control.Notification;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * @author zhong
  * @date 2020-10-14 15:24:11 周三
  */
 public class ExampleView extends View {
+
+    @FXML
+    private EleSwitch eleSwitch;
     @Override
     public String fxml() {
         return "Example.fxml";
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        eleSwitch.activeProperty().addListener((observable, oldValue, newValue) -> {
+            showNotificationAutoClose("active 状态：" + newValue);
+        });
     }
 
     @FXML
