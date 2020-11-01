@@ -1,5 +1,6 @@
 package xyz.yuelai;
 
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import xyz.yuelai.view.ExampleView;
@@ -15,7 +16,9 @@ public class App extends FXApplication {
         // 启用elementUI
         setElementStyleEnable(true);
         ExampleView view = View.createView(ExampleView.class);
-        primaryStage.setScene(new Scene(view.getRoot()));
+        Parent root = view.getRoot();
+
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 }

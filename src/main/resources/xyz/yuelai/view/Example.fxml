@@ -82,6 +82,9 @@
                         </HBox>
                         <Label text="滑块" />
                         <HBox spacing="10.0">
+                            <VBox.margin>
+                                <Insets top="100" />
+                            </VBox.margin>
                             <children>
                                 <EleSlider majorTickUnit="20.0" value="10.0" />
                                 <EleSlider disable="true" />
@@ -99,17 +102,21 @@
                             <children>
                                 <TableView fx:id="table" layoutX="51.0" layoutY="99.0" prefHeight="400.0" HBox.hgrow="ALWAYS">
                                     <columns>
-                                        <TableColumn prefWidth="75.0" text="日期">
-                                            <cellValueFactory>
-                                                <PropertyValueFactory property="date" />
-                                            </cellValueFactory>
-                                        </TableColumn>
                                         <TableColumn prefWidth="75.0" text="姓名">
                                             <cellValueFactory>
                                                 <PropertyValueFactory property="name" />
                                             </cellValueFactory>
                                         </TableColumn>
-                                        <TableColumn prefWidth="75.0" text="操作" />
+                                        <TableColumn prefWidth="75.0" text="年龄">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="age" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="75.0" text="地址" >
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="address" />
+                                            </cellValueFactory>
+                                        </TableColumn>
                                     </columns>
                                     <items>
                                         <fx:define>
@@ -117,13 +124,13 @@
                                             </Date>
                                         </fx:define>
                                         <FXCollections fx:factory="observableArrayList">
-                                            <User name="name1" />
-                                            <User name="name2" />
-                                            <User name="name4" />
-                                            <User name="name5" />
-                                            <User name="name6" />
-                                            <User name="name7" />
-                                            <User name="name8" />
+                                            <User name="name1" age="12" address="xx省xx市"/>
+                                            <User name="name2" age="13" address="xx省xx市"/>
+                                            <User name="name4" age="14" address="xx省xx市"/>
+                                            <User name="name5" age="15" address="xx省xx市"/>
+                                            <User name="name6" age="16" address="xx省xx市"/>
+                                            <User name="name7" age="17" address="xx省xx市"/>
+                                            <User name="name8" age="18" address="xx省xx市"/>
                                         </FXCollections>
                                     </items>
                                     <columnResizePolicy>
