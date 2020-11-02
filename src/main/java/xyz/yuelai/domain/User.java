@@ -8,15 +8,24 @@ import java.util.Date;
  */
 public class User {
 
-    private Date date;
     private String name;
+    private Integer age;
+    private String address;
 
-    public Date getDate() {
-        return date;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getName() {

@@ -17,12 +17,14 @@ import java.util.ResourceBundle;
  */
 public class ExampleView extends View {
 
-    @FXML
-    private EleSwitch eleSwitch;
     @Override
     public String fxml() {
         return "Example.fxml";
     }
+
+
+    @FXML
+    private EleSwitch eleSwitch;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
