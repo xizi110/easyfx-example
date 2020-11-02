@@ -6,6 +6,6 @@ package xyz.yuelai;
  */
 public class AppLauncher {
     public static void main(String[] args) {
-        FXApplication.launch(App.class);
+        FXApplication.launch(AppPreloader.class, App.class);
     }
 }
