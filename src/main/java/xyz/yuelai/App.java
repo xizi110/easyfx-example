@@ -27,6 +27,7 @@ public class App extends FXApplication {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setScene(new Scene(view.getRoot()));
+        primaryStage.setTitle("easyfx 代码演示");
         primaryStage.show();
     }
 }

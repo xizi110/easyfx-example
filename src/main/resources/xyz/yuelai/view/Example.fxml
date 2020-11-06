@@ -10,12 +10,28 @@
 <?import xyz.yuelai.domain.*?>
 
 <?import java.util.Date?>
+<?import xyz.yuelai.control.icon.Icon?>
 <StackPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
             <content>
                 <VBox prefWidth="985.0" spacing="10.0">
                     <children>
+                        <Label text="图标" />
+                        <HBox spacing="10">
+                            <children>
+                                <Button layoutX="59.0" layoutY="14.0" mnemonicParsing="false" onAction="#showNotification" styleClass="button-default" text="编辑" >
+                                        <graphic>
+                                            <Icon styleClass="el-icon-edit" />
+                                        </graphic>
+                                </Button>
+                                <Button layoutX="177.0" layoutY="14.0" mnemonicParsing="false" onAction="#showNotification" styleClass="button-danger" text="删除" >
+                                    <graphic>
+                                        <Icon styleClass="el-icon-delete" fill="#fff"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
                         <Label text="按钮" />
                         <HBox spacing="10">
                             <children>
